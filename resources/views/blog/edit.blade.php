@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Edit Data Blog - SantriKoding.com</title>
+    <title>Toko Batik</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body style="background: lightgray">
@@ -19,12 +19,12 @@
                             @method('PUT')
 
                             <div class="form-group">
-                                <label class="font-weight-bold">GAMBAR</label>
+                                <label class="font-weight-bold">Gambar</label>
                                 <input type="file" class="form-control" name="image">
                             </div>
 
                             <div class="form-group">
-                                <label class="font-weight-bold">JUDUL</label>
+                                <label class="font-weight-bold">Nama barang</label>
                                 <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title', $blog->title) }}" placeholder="Masukkan Judul Blog">
                             
                                 <!-- error message untuk title -->
@@ -36,7 +36,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="font-weight-bold">KONTEN</label>
+                                <label class="font-weight-bold">Deskripsi</label>
                                 <textarea class="form-control @error('content') is-invalid @enderror" name="content" rows="5" placeholder="Masukkan Konten Blog">{{ old('content', $blog->content) }}</textarea>
                             
                                 <!-- error message untuk content -->
