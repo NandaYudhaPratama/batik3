@@ -20,7 +20,7 @@
             <div class="col-md-12">
                 <div class="card border-0 shadow rounded">
                     <div class="card-body">
-                        <a href="{{ route('blog.create') }}" class="btn btn-md btn-success mb-3">TAMBAH BLOG</a>
+                        <a href="{{ route('blog.create') }}" class="btn btn-md btn-success mb-3">Tambah Produk</a>
                         <table class="table table-bordered">
                             <thead>
                               <tr>
