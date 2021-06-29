@@ -7,7 +7,7 @@
      @foreach($data_blog as $blog)
       <div class="col-md-4">
         <div class="card h-100 shadow p-3 bg-white rounded">
-          <img src="{{ Storage::url('public/blogs/').$blog->image }}" class="rounded mx-auto d-block card-img-top" alt="..." style="width: 300px;">
+          <img src="{{ Storage::url('public/blogs/').$blog->image }}" class="rounded mx-auto d-block card-img-top" alt="..." style="width: 250px;">
           <div class="card-body">
             <h5 class="card-title">
               {{$blog->title}}
@@ -15,11 +15,6 @@
             <p class="card-text">
               {!! $blog->content !!}
             </p>
-            <div class="card-footer">
-            <small class="text-muted">
-
-            </small>
-            </div>
           </div>
         </div>
       </div>
