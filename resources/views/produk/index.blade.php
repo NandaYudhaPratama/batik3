@@ -10,14 +10,14 @@
           <img src="{{$blog->image}}" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">
-              
+              {{$blog->nama}}
             </h5>
             <p class="card-text">
               {{$blog->content}}
             </p>
             <div class="card-footer">
             <small class="text-muted">
-              {{$blog->title}}
+
             </small>
             </div>
           </div>
