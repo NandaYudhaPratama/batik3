@@ -32,7 +32,7 @@
 
                             <div class="form-group">
                                 <label class="font-weight-bold">Nama barang</label>
-                                <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title') }}" placeholder="Masukkan Judul Blog">
+                                <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title') }}" placeholder="Masukkan Nama Product">
                             
                                 <!-- error message untuk title -->
                                 @error('title')
@@ -44,7 +44,7 @@
 
                             <div class="form-group">
                                 <label class="font-weight-bold">Deskripsi</label>
-                                <textarea class="form-control @error('content') is-invalid @enderror" name="content" rows="5" placeholder="Masukkan Konten Blog">{{ old('content') }}</textarea>
+                                <textarea class="form-control @error('content') is-invalid @enderror" name="content" rows="5" placeholder="Masukkan Deskripsi">{{ old('content') }}</textarea>
                             
                                 <!-- error message untuk content -->
                                 @error('content')
