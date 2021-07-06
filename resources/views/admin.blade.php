@@ -20,7 +20,7 @@
             <div class="col-sm card h-100 shadow p-3 bg-white rounded">
                 <form name="loginForm" method="get" action="{{url('/blog')}}">
                     <div style="margin-left:auto;margin-right:auto; width:25%;padding-bottom:20px; padding-top:20px;">
-                        <img src="~/images/profil.png" height="90px" width="90px">
+                        <img src="{{ asset('img/profil.png')}}" height="90px" width="90px">
 
                     </div>
                     <div class="form-floating mb-3">
@@ -66,3 +66,4 @@
     -->
   </body>
 </html>
+
