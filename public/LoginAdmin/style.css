@@ -1,132 +1,167 @@
-@import url("https://rsms.me/inter/inter-ui.css");
-::selection {
-    background: #2d2f36;
-}
-::-webkit-selection {
-    background: #2d2f36;
-}
-::-moz-selection {
-    background: #2d2f36;
+html {
+  height: 100%;
 }
 body {
-    background: white;
-    font-family: "Inter UI", sans-serif;
-    margin: 0;
-    padding: 20px;
+  margin:0;
+  padding:0;
+  font-family: sans-serif;
+  background: linear-gradient(#141e30, #243b55);
 }
-.page {
-    background: #e2e2e5;
-    display: flex;
-    flex-direction: column;
-    height: calc(100% - 40px);
-    position: absolute;
-    place-content: center;
-    width: calc(100% - 40px);
+
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
 }
-@media (max-width: 767px) {
-    .page {
-        height: auto;
-        margin-bottom: 20px;
-        padding-bottom: 20px;
-    }
+
+.login-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
 }
-.container {
-    display: flex;
-    height: 320px;
-    margin: 0 auto;
-    width: 640px;
+
+.login-box .user-box {
+  position: relative;
 }
-@media (max-width: 767px) {
-    .container {
-        flex-direction: column;
-        height: 630px;
-        width: 320px;
-    }
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
 }
-.left {
-    background: white;
-    height: calc(100% - 40px);
-    top: 20px;
-    position: relative;
-    width: 50%;
+.login-box .user-box label {
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
 }
-@media (max-width: 767px) {
-    .left {
-        height: 100%;
-        left: 20px;
-        width: calc(100% - 40px);
-        max-height: 270px;
-    }
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 12px;
 }
-.login {
-    font-size: 50px;
-    font-weight: 900;
-    margin: 50px 40px 40px;
+
+.login-box form a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #03e9f4;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px
 }
-.eula {
-    color: #999;
-    font-size: 14px;
-    line-height: 1.5;
-    margin: 40px;
+
+.login-box a:hover {
+  background: #03e9f4;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4,
+              0 0 25px #03e9f4,
+              0 0 50px #03e9f4,
+              0 0 100px #03e9f4;
 }
-.right {
-    background: #474a59;
-    box-shadow: 0px 0px 40px 16px rgba(0, 0, 0, 0.22);
-    color: #f1f1f2;
-    position: relative;
-    width: 50%;
+
+.login-box a span {
+  position: absolute;
+  display: block;
 }
-@media (max-width: 767px) {
-    .right {
-        flex-shrink: 0;
-        height: 100%;
-        width: 100%;
-        max-height: 350px;
-    }
+
+.login-box a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 1s linear infinite;
 }
-svg {
-    position: absolute;
-    width: 320px;
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,100% {
+    left: 100%;
+  }
 }
-path {
-    fill: none;
-    stroke: url(#linearGradient);
-    stroke-width: 4;
-    stroke-dasharray: 240 1386;
+
+.login-box a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: .25s
 }
-.form {
-    margin: 40px;
-    position: absolute;
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,100% {
+    top: 100%;
+  }
 }
-label {
-    color: #c2c2c5;
-    display: block;
-    font-size: 14px;
-    height: 16px;
-    margin-top: 20px;
-    margin-bottom: 5px;
+
+.login-box a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: .5s
 }
-input {
-    background: transparent !important;
-    border: 0;
-    color: #f2f2f2;
-    font-size: 20px;
-    height: 30px;
-    line-height: 30px;
-    outline: none !important;
-    width: 100%;
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,100% {
+    right: 100%;
+  }
 }
-input::-moz-focus-inner {
-    border: 0;
+
+.login-box a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: .75s
 }
-#submit {
-    color: #707075;
-    margin-top: 40px;
-    transition: color 300ms;
-}
-#submit:focus {
-    color: #f2f2f2;
-}
-#submit:active {
-    color: #d0d0d2;
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,100% {
+    bottom: 100%;
+  }
 }
